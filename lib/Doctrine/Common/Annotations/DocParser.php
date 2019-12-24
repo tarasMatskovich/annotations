@@ -461,7 +461,7 @@ final class DocParser
         }
 
         // first check if the class already exists, maybe loaded through another AnnotationReader
-        if (class_exists($fqcn, false)) {
+        if (class_exists($fqcn, true)) {
             return $this->classExists[$fqcn] = true;
         }
 
